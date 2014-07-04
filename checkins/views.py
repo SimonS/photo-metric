@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from checkins.models import Checkin
@@ -13,4 +14,6 @@ def index(request):
             weight = form.cleaned_data['weight']
             checkin = Checkin(date=date,weight=weight,photo=request.FILES['photo'])
             checkin.save()
+            return HttpResponseRedirect('/')
+
     return render(request, 'index.html', {'checkins': Checkin.objects.all(), 'form': form})
