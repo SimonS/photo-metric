@@ -11,30 +11,42 @@
     <script gumby-path="{% static 'gumby/js/libs' %}" src="{% static 'gumby/js/libs/gumby.min.js' %}"></script>
 </head>
 <body>
-<table>
-    <thead>
-    <tr>
-        <th>Date</th>
-        <th>Weight</th>
-        <th>Photo URL</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for checkin in checkins %}
-        <tr>
-            <td>{{ checkin.date }}</td>
-            <td>{{ checkin.weight }}</td>
-            <td><img src="{{ checkin.photo.url }}" style="max-width: 200px"/></td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-
-<form action='/' method='post' enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type='submit' value='Submit'/>
-</form>
+<div class="row navbar">
+    <h1 class="logo">PhotoType</h1>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <h2>Check-In</h2>
+        <form action='/' method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type='submit' value='Submit'/>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <h2>Progress</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Weight</th>
+                <th>Photo</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for checkin in checkins %}
+                <tr>
+                    <td>{{ checkin.date }}</td>
+                    <td>{{ checkin.weight }}</td>
+                    <td><img src="{{ checkin.photo.url }}" style="max-width: 200px"/></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 
 </body>
 </html>
