@@ -5,6 +5,21 @@
     <title>Phototype</title>
 </head>
 <body>
-
+<table>
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Weight</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for checkin in checkins %}
+        <tr>
+            <td>{{ checkin.date }}</td>
+            <td>{{ checkin.weight }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 </body>
 </html>
