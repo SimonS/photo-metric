@@ -18,10 +18,17 @@
         <tr>
             <td>{{ checkin.date }}</td>
             <td>{{ checkin.weight }}</td>
-            <td>{{ checkin.photo.url }}</td>
+            <td><img src="{{ checkin.photo.url }}" style="max-width: 200px" /></td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
+
+<form action='/' method='post' enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Submit' />
+</form>
+
 </body>
 </html>
