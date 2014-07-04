@@ -3,3 +3,4 @@ bin/
 include/
 db.sqlite3
 media/*
+components
