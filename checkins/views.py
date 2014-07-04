@@ -5,9 +5,7 @@ from checkins.models import Checkin
 from checkins.forms import CheckinForm
 
 def index(request):
-    if request.method == 'GET':
-        form = CheckinForm()
-    else:
+    if request.method == 'POST':
         form = CheckinForm(request.POST, request.FILES)
         if form.is_valid():
             date = form.cleaned_data['date']
@@ -15,5 +13,7 @@ def index(request):
             checkin = Checkin(date=date,weight=weight,photo=request.FILES['photo'])
             checkin.save()
             return HttpResponseRedirect('/')
+    else:
+        form = CheckinForm()
 
     return render(request, 'index.html', {'checkins': Checkin.objects.all(), 'form': form})
