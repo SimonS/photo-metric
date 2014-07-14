@@ -2,6 +2,12 @@ as this stands, it's a very simple scaffold for a weight-tracking tool I've had 
 
 Purely a prototype. Don't judge me. Yet.
 
+Current Features
+================
+
+* Checkin date, weight and photo
+* Display checkins
+
 Todo List
 =========
 
