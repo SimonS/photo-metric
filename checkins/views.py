@@ -1,9 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from checkins.models import Checkin
 from checkins.forms import CheckinForm
 
+@login_required
 def index(request):
     if request.method == 'POST':
         form = CheckinForm(request.POST, request.FILES)

@@ -1,19 +1,6 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <title>Phototype</title>
-    {% load static from staticfiles %}
-    <link rel="stylesheet" href="{% static 'gumby/css/gumby.css' %}"/>
+{% extends "base.html" %}
 
-    <script src="{% static 'gumby/js/libs/modernizr-2.6.2.min.js' %}"></script>
-
-    <script gumby-path="{% static 'gumby/js/libs' %}" src="{% static 'gumby/js/libs/gumby.min.js' %}"></script>
-</head>
-<body>
-<div class="row navbar">
-    <h1 class="logo">PhotoType</h1>
-</div>
+{% block content %}
 <div class="row">
     <div class="twelve columns">
         <h2>Check-In</h2>
@@ -24,6 +11,7 @@
         </form>
     </div>
 </div>
+
 <div class="row">
     <div class="twelve columns">
         <h2>Progress</h2>
@@ -47,6 +35,4 @@
         </table>
     </div>
 </div>
-
-</body>
-</html>
+{% endblock %}

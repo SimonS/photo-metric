@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'phototype.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout'),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', index),
