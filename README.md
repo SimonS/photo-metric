@@ -11,10 +11,10 @@ Current Features
 Todo List
 =========
 
-[ ] Put behind sign-in
-[ ] Add database versioning
-[ ] Add read / write navigation
-[ ] Add graph to read page
-[ ] Resize uploaded images
-[ ] Export transformation GIF
-[ ] Pre-upload image editing
+- [ ] Put behind sign-in
+- [ ] Add database versioning
+- [ ] Add read / write navigation
+- [ ] Add graph to read page
+- [ ] Resize uploaded images
+- [ ] Export transformation GIF
+- [ ] Pre-upload image editing
