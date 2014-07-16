@@ -13,17 +13,11 @@
 <body>
 <div class="row navbar">
     <h1 class="logo">PhotoType</h1>
+    {% if not user.is_anonymous %}
+        <ul>
+            <li><a href="{% url 'django.contrib.auth.views.logout' %}">Logout</a></li>
+        </ul>
+    {%  endif %}
 </div>
 
-<div class="row">
-    <div class="twelve columns">
-{% block content %}
-        <h2>Check-In</h2>
-        <form action='/' method='post' enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type='submit' value='Submit'/>
-        </form>
-{% endblock %}
-    </div>
-</div>
+{% block content %}{% endblock %}
