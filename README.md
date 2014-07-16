@@ -7,11 +7,11 @@ Current Features
 
 * Checkin date, weight and photo
 * Display checkins
+* very rudimentary authentication
 
 Todo List
 =========
 
-- [ ] Put behind sign-in
 - [ ] Add database versioning
 - [ ] Add read / write navigation
 - [ ] Add graph to read page
