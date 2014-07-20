@@ -12,7 +12,6 @@ Current Features
 Todo List
 =========
 
-- [ ] Add database versioning
 - [ ] Add read / write navigation
 - [ ] Add graph to read page
 - [ ] Resize uploaded images
