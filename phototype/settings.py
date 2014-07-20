@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'checkins',
     'djangobower',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (

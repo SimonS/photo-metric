@@ -1,3 +1,6 @@
 Django==1.6.5
 Pillow==2.5.0
+South==1.0
 django-bower==5.0.1
+django-floppy-gumby==0.1
+django-floppyforms==1.2.0
